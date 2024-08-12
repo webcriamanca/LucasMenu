@@ -1,0 +1,46 @@
+local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/StepBroFurious/Script/main/HydraHubUi.lua'))()
+local Window = UILib.new("Lucas Menu", game.Players.LocalPlayer.UserId, "LucasMenu")
+local Category1 = Window:Category("Main", "http://www.roblox.com/asset/?id=8395621517")
+local Category2 = Window:Category("EM BREVE", "http://www.roblox.com/asset/?id=8395621517")
+local SubButton1 = Category2:Button("RM BREVE", "http://www.roblox.com/asset/?id=8395747586")
+local SubButton1 = Category1:Button("PVP", "http://www.roblox.com/asset/?id=8395747586")
+local Section1 = SubButton1:Section("Section", "Left")
+Section1:Button({
+    Title = "INFINITY YIELD",
+    ButtonName = "EXECUTAR",
+    Description = "LucasMenu",
+    }, function(value)
+    print(loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))())
+end)
+
+Section1:Toggle({
+    Title = "GOD MODE",
+    Description = "LucasMenu",
+    Default = false
+    }, function(value)
+    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))())
+end)
+
+Section1:Keybind({
+    Title = "Aimbot",
+    Description = "LucasMenu",
+    Default = Enum.KeyCode.Q,
+    }, function(value)
+    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/LucasMenu-aimbot-/main/LucasMenu%20(aimbot)",true))())
+end)
+
+Section1:Button({
+    Title = "ESP V2",
+    ButtonName = "EXECUTAR",
+    Description = "LucasMenu",
+    }, function(value)
+    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/ESP-LucasMenu-/main/esp%20lucasmenu",true))())
+end)
+
+Section1:Button({
+    Title = "FLY GUI V3",
+    ButtonName = "EXECUTAR",
+    Description = "LucasMenu",
+    }, function(value)
+    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))())
+end)
