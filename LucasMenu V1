@@ -162,14 +162,6 @@ configSection:AddButton({
       end
 })
 
-configTab:AddButton({
-	Name = "Give armas - ACS",
-	Callback = function(value)
-  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/puxar-arma/main/Puxador",true))())
-    end
-        
-})
-
 configSection:AddButton({
 	Name = "Destruir UI",
 	Callback = function()
