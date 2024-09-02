@@ -74,7 +74,7 @@ PlayerSection:AddButton({
         
 })
 
-PlayergSection:AddButton({
+PlayerSection:AddButton({
 	Name = "Destruir UI",
 	Callback = function()
         OrionLib:Destroy()
@@ -180,13 +180,13 @@ SettingsSection:AddButton({
 
 
 local configTab = Window:MakeTab({
-    Name = "Arma",
+    Name = "config",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local configSection = configTab:AddSection({
-    Name = "Funçoes"
+    Name = "config"
 })
 
 configSection:AddButton({
