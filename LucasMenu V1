@@ -50,34 +50,6 @@ PlayerSection:AddButton({
       end
 })
 
-PlayerSection:AddButton({
-  Name = "Sit",
-  Callback = function(value)
-  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/master/Sit.lua",true))())
-    end
-})
-
-PlayerSection:AddButton({
-  Name = "speed Menu",
-  Callback = function(value)
-  print(loadstring(game:HttpGet("https://pastebin.com/raw/1BEgf70g",true))())
-    end
-})
-
-PlayerSection:AddButton({
-  Name = "inf jump Menu",
-  Callback = function(value)
-  print(loadstring(game:HttpGet("https://pastebin.com/raw/1UmLspx5",true))())
-    end
-})
-
-PlayerSection:AddButton({
-  Name = "invisible",
-  Callback = function(value)
-  print(loadstring(game:HttpGet("https://pastebin.com/raw/uUtRsAX5"))())
-    end
-})
-
 
 local SettingsTab = Window:MakeTab({
     Name = "Funçoes",
@@ -148,13 +120,41 @@ SettingsSection:AddButton({
 
 
 local configTab = Window:MakeTab({
-    Name = "Arma",
+    Name = "config",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local configSection = configTab:AddSection({
     Name = "config"
+})
+
+configSection:AddButton({
+    Name = "Sit",
+    Callback = function(value)
+    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/master/Sit.lua",true))())
+      end
+})
+
+configSection:AddButton({
+    Name = "speed Menu",
+    Callback = function(value)
+    print(loadstring(game:HttpGet("https://pastebin.com/raw/1BEgf70g",true))())
+      end
+})
+
+configSection:AddButton({
+    Name = "inf jump Menu",
+    Callback = function(value)
+    print(loadstring(game:HttpGet("https://pastebin.com/raw/1UmLspx5",true))())
+      end
+})
+
+configSection:AddButton({
+    Name = "invisible",
+    Callback = function(value)
+    print(loadstring(game:HttpGet("https://pastebin.com/raw/uUtRsAX5"))())
+      end
 })
 
 configSection:AddButton({
@@ -456,6 +456,29 @@ configSection:AddButton({
   print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))())
     end
         
+})
+
+configSection:AddButton({
+	Name = "Kick all",
+	Callback = function(value)
+  print(loadstring(game:HttpGet("https://pastebin.com/raw/pdW98pEa"))())
+    end
+        
+})
+
+configSection:AddButton({
+	Name = "Deletar Map",
+	Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zMarcxzz/delete-all/main/source"))())
+    end
+        
+})
+
+configSection:AddButton({
+	Name = "Destruir UI",
+	Callback = function()
+        OrionLib:Destroy()
+  	end    
 })
 
 configTab:AddButton({
