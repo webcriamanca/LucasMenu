@@ -51,38 +51,6 @@ PlayerSection:AddButton({
 })
 
 PlayerSection:AddButton({
-	Name = "Auto jjs",
-	Callback = function(value)
-  print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))())
-    end
-        
-})
-
-PlayerSection:AddButton({
-	Name = "Kick all",
-	Callback = function(value)
-  print(loadstring(game:HttpGet("https://pastebin.com/raw/pdW98pEa"))())
-    end
-        
-})
-
-PlayerSection:AddButton({
-	Name = "Deletar Map",
-	Callback = function(value)
-  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zMarcxzz/delete-all/main/source"))())
-    end
-        
-})
-
-PlayerSection:AddButton({
-	Name = "Destruir UI",
-	Callback = function()
-        OrionLib:Destroy()
-  	end    
-})
-
-
-PlayerSection:AddButton({
   Name = "Sit",
   Callback = function(value)
   print(loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/master/Sit.lua",true))())
@@ -180,7 +148,7 @@ SettingsSection:AddButton({
 
 
 local configTab = Window:MakeTab({
-    Name = "config",
+    Name = "Arma",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -480,6 +448,14 @@ configSection:AddButton({
       OnChar(Player.Character or Player.CharacterAdded:wait())
       end,print)
 end    
+})
+
+configSection:AddButton({
+	Name = "Auto jjs",
+	Callback = function(value)
+  print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))())
+    end
+        
 })
 
 configTab:AddButton({
