@@ -162,6 +162,14 @@ configSection:AddButton({
       end
 })
 
+configTab:AddButton({
+	Name = "Give armas - ACS",
+	Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/puxar-arma/main/Puxador",true))())
+    end
+        
+})
+
 configSection:AddButton({
 	Name = "Destruir UI",
 	Callback = function()
@@ -194,15 +202,15 @@ EspSection:AddButton({
 })
 
 EspSection:AddButton({
-  Name = "ESP OP",
+  Name = "ESP V3",
   Callback = function(value)
   print(loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua",true))())
     end
 })
 
-SettingsSection:AddButton({
-  Name = "Aimbot 2",
+EspSection:AddButton({
+  Name = "ESP V3",
   Callback = function(value)
-  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/coder382/CodeHub/main/Universal.lua"))())
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua",true))())
     end
 })
