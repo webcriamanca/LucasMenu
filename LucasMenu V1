@@ -22,6 +22,16 @@ local PlayerSection = PlayerTab:AddSection({
     Name = "Menu"
 })
 
+PlayerTab:AddButton({
+	Name = "Puxar Dinheiro TGI",
+	Callback = function()
+      		local Player = game.Players.LocalPlayer
+local Dinheiro = Player.leaderstats.Dinheiro
+
+Dinheiro.Value = 99999999
+  	end    
+})
+
 PlayerSection:AddButton({
     Name = "Crash Server 1",
     Callback = function(value)
