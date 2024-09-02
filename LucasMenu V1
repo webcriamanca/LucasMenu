@@ -176,7 +176,7 @@ configSection:AddButton({
 })
 
 local EspTab = Window:MakeTab({
-  Name = "Esp/visual",
+  Name = "Esp",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
