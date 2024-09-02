@@ -1,14 +1,14 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
-    Name = "Lucas Menu",
-    Content = "Executando.....",
+    Name = "Lucas Menu Roleplay",
+    Content = "Executando...",
     Image = "rbxassetid://4483345998",
     Time = 5
 })
 
 
-local Window = OrionLib:MakeWindow({Name = "Lucas Menu V2", HidePremium = false, SaveConfig = true, ConfigFolder = "Lucas"})
+local Window = OrionLib:MakeWindow({Name = "Lucas Menu Rp", HidePremium = false, SaveConfig = true, ConfigFolder = "Lucas"})
 
 --Player Tab--
 
@@ -123,12 +123,6 @@ SettingsSection:AddButton({
       end
 })
 
-SettingsSection:AddButton({
-    Name = "Aimbot 2 (off) Muito lag",
-    Callback = function(value)
-    print()
-      end
-})
 
 local configTab = Window:MakeTab({
     Name = "config",
@@ -168,6 +162,14 @@ configSection:AddButton({
       end
 })
 
+configTab:AddButton({
+	Name = "Give armas - ACS",
+	Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/puxar-arma/main/Puxador",true))())
+    end
+        
+})
+
 configSection:AddButton({
 	Name = "Destruir UI",
 	Callback = function()
@@ -176,7 +178,7 @@ configSection:AddButton({
 })
 
 local EspTab = Window:MakeTab({
-  Name = "Esp",
+  Name = "Esp/visual",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
@@ -203,5 +205,12 @@ EspSection:AddButton({
   Name = "ESP OP",
   Callback = function(value)
   print(loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua",true))())
+    end
+})
+
+SettingsSection:AddButton({
+  Name = "Aimbot 2",
+  Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/coder382/CodeHub/main/Universal.lua"))())
     end
 })
