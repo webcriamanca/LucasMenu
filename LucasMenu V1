@@ -50,6 +50,34 @@ PlayerSection:AddButton({
       end
 })
 
+PlayerSection:AddButton({
+  Name = "Sit",
+  Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/master/Sit.lua",true))())
+    end
+})
+
+PlayerSection:AddButton({
+  Name = "speed Menu",
+  Callback = function(value)
+  print(loadstring(game:HttpGet("https://pastebin.com/raw/1BEgf70g",true))())
+    end
+})
+
+PlayerSection:AddButton({
+  Name = "inf jump Menu",
+  Callback = function(value)
+  print(loadstring(game:HttpGet("https://pastebin.com/raw/1UmLspx5",true))())
+    end
+})
+
+PlayerSection:AddButton({
+  Name = "invisible",
+  Callback = function(value)
+  print(loadstring(game:HttpGet("https://pastebin.com/raw/uUtRsAX5"))())
+    end
+})
+
 
 local SettingsTab = Window:MakeTab({
     Name = "Funçoes",
@@ -155,6 +183,13 @@ configSection:AddButton({
     Callback = function(value)
     print(loadstring(game:HttpGet("https://pastebin.com/raw/uUtRsAX5"))())
       end
+})
+
+configSection:AddButton({
+  Name = "Aimbot (mobile)",
+  Callback = function(value)
+  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Pedroxz63/PedroxzAIMBOT/main/README.md", true)))
+    end
 })
 
 configTab:AddButton({
@@ -828,4 +863,21 @@ TextButton.MouseButton1Down:Connect(function()
 	TextButton:Destroy()
 end)
   	end    
+})
+
+local CarrosrTab = Window:MakeTab({
+  Name = "Carros",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+
+local CarrosSection = CarrosTab:AddSection({
+  Name = "Funçoes"
+})
+
+CarrosSection:AddButton({
+  Name = "",
+  Callback = function(value)
+  print()
+    end
 })
