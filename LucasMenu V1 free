@@ -47,7 +47,7 @@ PlayerSection:AddButton({
 })
 
 PlayerSection:AddButton({
-    Name = "",
+    Name = "Feito por: luorwq",
     Callback = function(value)
     print()
       end
@@ -84,12 +84,6 @@ SettingsSection:AddButton({
       end
 })
 
-SettingsSection:AddButton({
-    Name = "Silent aim",
-    Callback = function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua",true))())
-      end
-})
 
 SettingsSection:AddButton({
     Name = "God Mode",
@@ -121,7 +115,7 @@ SettingsTab:AddButton({
 })
 
 SettingsSection:AddButton({
-    Name = "F3X btools",
+    Name = "F3X btools (risco de ban!!)",
     Callback = function(value)
     print(loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)())
       end
@@ -129,7 +123,7 @@ SettingsSection:AddButton({
 
 
 local configTab = Window:MakeTab({
-    Name = "config",
+    Name = "Armas/players",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -460,25 +454,9 @@ end
 })
 
 configSection:AddButton({
-	Name = "Auto jjs",
-	Callback = function(value)
-  print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))())
-    end
-        
-})
-
-configSection:AddButton({
 	Name = "Kick all",
 	Callback = function(value)
   print(loadstring(game:HttpGet("https://pastebin.com/raw/pdW98pEa"))())
-    end
-        
-})
-
-configSection:AddButton({
-	Name = "Deletar Map",
-	Callback = function(value)
-  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zMarcxzz/delete-all/main/source"))())
     end
         
 })
