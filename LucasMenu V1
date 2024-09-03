@@ -113,6 +113,20 @@ SettingsSection:AddButton({
       end
 })
 
+SettingsTab:AddButton({
+    Name = "AUTO JJs (true)",
+    Callback = function()
+         _G.Jump = true 
+         loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))()
+      end  
+})
+SettingsTab:AddButton({
+    Name = "AUTO JJs (false)",
+    Callback = function()
+         _G.Jump = true 
+         loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))()
+      end  
+})
 
 SettingsSection:AddButton({
     Name = "kill/fling all (OFF)",
@@ -858,8 +872,21 @@ local CarrosSection = CarrosTab:AddSection({
 })
 
 CarrosSection:AddButton({
-  Name = "",
+  Name = "Lucas",
   Callback = function(value)
   print()
     end
+})
+
+BypassTab:AddButton({
+	Name = "Bypass Adonis (Funcional)",
+	Callback = function()
+		local notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/notiflib/main/main"))()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro2/main/ui2"))()
+		local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+		 NotifyLib.prompt('Adonis Anti-Cheat Disabler Bypass', 'bypassed', 1.2)
+		 NotifyLib.prompt('Adonis Anti-Cheat Disabler Bypass', 'this only works for games that have adonis in it', 1.2)
+		
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RelkzzRebranded/Bypassed---OBFUSCATED..../main/Adonis%20BYPASS.lua"))()
+  	end   
 })
