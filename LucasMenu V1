@@ -114,13 +114,6 @@ SettingsTab:AddButton({
 })
 
 SettingsSection:AddButton({
-    Name = "fling",
-    Callback = function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/webcriamanca/fling/main/fling%20all",true))())
-      end
-})
-
-SettingsSection:AddButton({
     Name = "F3X btools",
     Callback = function(value)
     print(loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)())
