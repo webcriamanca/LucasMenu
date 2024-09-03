@@ -62,7 +62,7 @@ PlayerSection:AddButton({
 
 
 local SettingsTab = Window:MakeTab({
-    Name = "Funçoes",
+    Name = "MENU",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -115,13 +115,6 @@ SettingsSection:AddButton({
 
 SettingsTab:AddButton({
     Name = "AUTO JJs (true)",
-    Callback = function()
-         _G.Jump = true 
-         loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))()
-      end  
-})
-SettingsTab:AddButton({
-    Name = "AUTO JJs (false)",
     Callback = function()
          _G.Jump = true 
          loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))()
