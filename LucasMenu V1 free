@@ -85,13 +85,6 @@ SettingsSection:AddButton({
 })
 
 SettingsSection:AddButton({
-    Name = "Silent aim",
-    Callback = function(value)
-    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua",true))())
-      end
-})
-
-SettingsSection:AddButton({
     Name = "God Mode",
     Callback = function(value)
     print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))())
@@ -460,25 +453,9 @@ end
 })
 
 configSection:AddButton({
-	Name = "Auto jjs",
-	Callback = function(value)
-  print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))())
-    end
-        
-})
-
-configSection:AddButton({
 	Name = "Kick all",
 	Callback = function(value)
   print(loadstring(game:HttpGet("https://pastebin.com/raw/pdW98pEa"))())
-    end
-        
-})
-
-configSection:AddButton({
-	Name = "Deletar Map",
-	Callback = function(value)
-  print(loadstring(game:HttpGet("https://raw.githubusercontent.com/zMarcxzz/delete-all/main/source"))())
     end
         
 })
@@ -854,24 +831,4 @@ local CarrosrTab = Window:MakeTab({
 
 local CarrosSection = CarrosTab:AddSection({
   Name = "Funçoes"
-})
-
-CarrosSection:AddButton({
-  Name = "Lucas",
-  Callback = function(value)
-  print()
-    end
-})
-
-BypassTab:AddButton({
-	Name = "Bypass Adonis (Funcional)",
-	Callback = function()
-		local notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/notiflib/main/main"))()
-		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro2/main/ui2"))()
-		local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
-		 NotifyLib.prompt('Adonis Anti-Cheat Disabler Bypass', 'bypassed', 1.2)
-		 NotifyLib.prompt('Adonis Anti-Cheat Disabler Bypass', 'this only works for games that have adonis in it', 1.2)
-		
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/RelkzzRebranded/Bypassed---OBFUSCATED..../main/Adonis%20BYPASS.lua"))()
-  	end   
 })
