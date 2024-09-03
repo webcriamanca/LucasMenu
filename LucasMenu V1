@@ -62,7 +62,7 @@ PlayerSection:AddButton({
 
 
 local SettingsTab = Window:MakeTab({
-    Name = "MENU",
+    Name = "OUTROS",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
