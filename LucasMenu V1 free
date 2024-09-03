@@ -84,6 +84,12 @@ SettingsSection:AddButton({
       end
 })
 
+SettingsSection:AddButton({
+    Name = "Silent aim",
+    Callback = function(value)
+    print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua",true))())
+      end
+})
 
 SettingsSection:AddButton({
     Name = "God Mode",
@@ -451,6 +457,14 @@ configSection:AddButton({
       OnChar(Player.Character or Player.CharacterAdded:wait())
       end,print)
 end    
+})
+
+configSection:AddButton({
+	Name = "Auto jjs",
+	Callback = function(value)
+  print(loadstring(game:HttpGet(("https://raw.githubusercontent.com/GameLeaks2/RobloxScripts/main/AUTO-JJS%20ALL%20EB.lua"),true))())
+    end
+        
 })
 
 configSection:AddButton({
