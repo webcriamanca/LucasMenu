@@ -122,7 +122,7 @@ SettingsSection:AddButton({
 
 
 local configTab = Window:MakeTab({
-    Name = "config",
+    Name = "Armas/Players",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
